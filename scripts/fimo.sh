@@ -14,6 +14,7 @@ fimo=$samplename-allTF.fimo.txt.gz
 bamfile=$3
 outputpath=$4
 
+
 echo 'Filtering significant peaks...'
 zcat $peak | awk '{if ($8 > 8) print}' | gzip > $filtpeak
 
